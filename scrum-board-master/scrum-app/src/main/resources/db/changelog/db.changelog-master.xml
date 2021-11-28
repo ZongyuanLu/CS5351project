@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="Daniel">
+        <sqlFile path="01_init_scrum.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Create table with Kanaban info</comment>
+    </changeSet>
+
+    <changeSet id="2" author="Leo">
+        <sqlFile path="02_init_task.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Create table with task info</comment>
+    </changeSet>
+
+    <changeSet id="3" author="Emma">
+        <sqlFile path="03_scrum_column.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Add scrum_id column to task table</comment>
+    </changeSet>
+
+    <changeSet id="4" author="Leo">
+        <sqlFile path="04_task_status.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Add status column to task table</comment>
+    </changeSet>
+
+    <changeSet id="5" author="Emma">
+        <sqlFile path="07_init_scrum_user.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+        <comment>Create table with scrumUser info</comment>
+    </changeSet>
+
+    <changeSet id="6" author="Jane">
+        <sqlFile path="05_init_user.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+        <comment>Create table with user info</comment>
+    </changeSet>
+
+    <changeSet id="7" author="Jane">
+        <sqlFile path="06_init_role.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+        <comment>Create table with role info</comment>
+    </changeSet>
+
+</databaseChangeLog>
+

@@ -1,0 +1,15 @@
+{
+    "data":
+    [
+        {
+            "project": "5",
+            "duration": 10,
+            "sprints": 3
+        },
+        {
+            "project": "1",
+            "duration": 10,
+            "sprints": 2
+        }
+    ]
+}
